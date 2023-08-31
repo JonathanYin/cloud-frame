@@ -28,7 +28,6 @@ export default async function GalleryPage() {
         <div className="grid grid-cols-4 gap-4">
           {results.resources.map((result) => (
             <CloudImage
-              path="gallery"
               key={result.public_id}
               imageData={result}
               width="400"

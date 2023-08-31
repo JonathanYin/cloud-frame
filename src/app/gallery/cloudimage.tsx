@@ -7,7 +7,9 @@ import { useTransition } from "react";
 import { SearchResult } from "./page";
 import { SolidStar } from "@/components/icons/solidstar";
 
-export function CloudImage(props: any & { imageData: SearchResult }) {
+export function CloudImage(
+  props: any & { imageData: SearchResult; path: string }
+) {
   const [transition, startTransition] = useTransition();
 
   const { imageData } = props;
@@ -21,7 +23,7 @@ export function CloudImage(props: any & { imageData: SearchResult }) {
         <SolidStar
           onClick={() => {
             startTransition(() => {
-              MarkAsFavorite(imageData.public_id, false);
+              MarkAsFavorite(imageData.public_id, false, props.path);
             });
           }}
           className="absolute top-2 right-2 hover:text-white text-violet-500 cursor-pointer"
@@ -30,7 +32,7 @@ export function CloudImage(props: any & { imageData: SearchResult }) {
         <Star
           onClick={() => {
             startTransition(() => {
-              MarkAsFavorite(imageData.public_id, true);
+              MarkAsFavorite(imageData.public_id, true, props.path);
             });
           }}
           className="absolute top-2 right-2 hover:text-violet-500 cursor-pointer"

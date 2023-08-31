@@ -32,9 +32,9 @@ function SideMenu() {
                 className="w-6 h-6"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
               Gallery
@@ -58,9 +58,9 @@ function SideMenu() {
                 className="w-6 h-6"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 />
               </svg>
               Favorites
@@ -104,7 +104,7 @@ export default function RootLayout({
 
         <div className="flex">
           <SideMenu />
-          <div className="w-full px-4 pt-8">{children}</div>
+          <div className="w-full px-5 pt-8">{children}</div>
         </div>
       </body>
     </html>

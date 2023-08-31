@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -80,7 +81,17 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <div className="border-b">
-          <div className="flex h-16 items-center px-4 container mx-auto">
+          <div
+            className="flex h-16 items-center px-4 mx-auto"
+            style={{ maxWidth: "95%" }}
+          >
+            <Image
+              src="/images/cloud.svg"
+              width="50"
+              height="50"
+              alt="Next.js Logo"
+              className="mr-4"
+            />
             Cloud Frame
             <div className="ml-auto flex items-center space-x-4">
               <Avatar>
@@ -93,7 +104,7 @@ export default function RootLayout({
 
         <div className="flex">
           <SideMenu />
-          <div className="w-full">{children}</div>
+          <div className="w-full px-4 pt-8">{children}</div>
         </div>
       </body>
     </html>

@@ -1,7 +1,7 @@
 "use client";
 
 import { ImageGrid } from "@/components/imagegrid";
-import { CloudImage } from "./cloudimage";
+import { CloudImage } from "../../components/cloudimage";
 
 export type SearchResult = {
   public_id: string;

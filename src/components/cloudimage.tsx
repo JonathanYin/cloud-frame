@@ -2,10 +2,11 @@
 
 import { Star } from "@/components/icons/star";
 import { CldImage, CldImageProps } from "next-cloudinary";
-import { MarkAsFavorite } from "./actions";
+import { MarkAsFavorite } from "../app/gallery/actions";
 import { useState, useTransition } from "react";
-import { SearchResult } from "./page";
+import { SearchResult } from "../app/gallery/page";
 import { SolidStar } from "@/components/icons/solidstar";
+import { ImageMenu } from "./imagemenu";
 
 export function CloudImage(
   props: {
@@ -46,6 +47,7 @@ export function CloudImage(
           className="absolute top-2 right-2 hover:text-violet-500 cursor-pointer"
         />
       )}
+      <ImageMenu />
     </div>
   );
 }

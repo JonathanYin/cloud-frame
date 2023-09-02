@@ -47,7 +47,7 @@ export function CloudImage(
           className="absolute top-2 right-2 hover:text-violet-500 cursor-pointer"
         />
       )}
-      <ImageMenu />
+      <ImageMenu image={imageData} />
     </div>
   );
 }

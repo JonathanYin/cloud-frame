@@ -6,14 +6,13 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "./icons/menu";
+import { AddToAlbum } from "./addtoalbum";
+import { SearchResult } from "@/app/gallery/page";
 
-export function ImageMenu() {
+export function ImageMenu({ image }: { image: SearchResult }) {
   return (
     <div className="absolute top-2 left-2">
       <DropdownMenu>
@@ -23,12 +22,9 @@ export function ImageMenu() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-36">
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
           <DropdownMenuGroup>
-            <DropdownMenuItem>
-              <FolderPlus className="mr-2 h-4 w-4" />
-              <span>Add to Album</span>
+            <DropdownMenuItem asChild>
+              <AddToAlbum image={image} />
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>

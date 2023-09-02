@@ -3,10 +3,7 @@
 import { ImageGrid } from "@/components/imagegrid";
 import { CloudImage } from "../../components/cloudimage";
 
-export type SearchResult = {
-  public_id: string;
-  tags: string[];
-};
+import { SearchResult } from "./page";
 
 export default function GalleryGrid({ images }: { images: SearchResult[] }) {
   return (

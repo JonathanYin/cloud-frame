@@ -24,7 +24,7 @@ export function AddToAlbum({ image }: { image: SearchResult }) {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger>
         <Button variant="ghost" className="flex items-center space-x-2">
-          <FolderPlus className="h-6 w-6" />
+          <FolderPlus className="mx-auto h-6 w-6" />
           <span>Add to Album</span>
         </Button>
       </DialogTrigger>

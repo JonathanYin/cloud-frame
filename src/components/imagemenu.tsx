@@ -17,7 +17,7 @@ export function ImageMenu({ image }: { image: SearchResult }) {
     <div className="absolute top-2 left-2">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="secondary" className="w-8 h-8 p-2">
+          <Button variant="secondary" className="w-8 h-8 p-0">
             <Menu />
           </Button>
         </DropdownMenuTrigger>

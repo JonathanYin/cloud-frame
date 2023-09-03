@@ -1,5 +1,3 @@
-import { FolderPlus, User } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,6 +10,8 @@ import { Menu } from "./icons/menu";
 import { AddToAlbum } from "./addtoalbum";
 import { SearchResult } from "@/app/gallery/page";
 import { useState } from "react";
+import Link from "next/link";
+import { Pencil } from "lucide-react";
 
 export function ImageMenu({ image }: { image: SearchResult }) {
   const [open, setOpen] = useState(false);
@@ -26,8 +26,26 @@ export function ImageMenu({ image }: { image: SearchResult }) {
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-36">
           <DropdownMenuGroup>
-            <DropdownMenuItem asChild>
+            <DropdownMenuItem asChild className="my-1">
               <AddToAlbum image={image} onClose={() => setOpen(false)} />
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild className="my-1">
+              <Button
+                asChild
+                variant="ghost"
+                className="cursor-pointer flex justify-start items-center"
+              >
+                <Link
+                  href={`/edit?publicId=${encodeURIComponent(image.public_id)}`}
+                >
+                  <div className="flex items-center justify-start">
+                    <div className="w-6 mr-4 ml-2">
+                      <Pencil className="mr-2 h-6 w-6" />
+                    </div>
+                    <span>Edit</span>
+                  </div>
+                </Link>
+              </Button>
             </DropdownMenuItem>
           </DropdownMenuGroup>
         </DropdownMenuContent>

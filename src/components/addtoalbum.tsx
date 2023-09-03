@@ -35,7 +35,7 @@ export function AddToAlbum({
       }}
     >
       <DialogTrigger>
-        <Button variant="ghost" className="flex items-center space-x-2">
+        <Button variant="ghost" className="flex items-center">
           <FolderPlus className="mx-auto h-6 w-6" />
           <span>Add to Album</span>
         </Button>

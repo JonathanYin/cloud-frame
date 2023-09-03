@@ -88,14 +88,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="border-b">
           <div
-            className="flex h-16 items-center px-4 mx-auto"
-            style={{ maxWidth: "95%" }}
+            className="flex h-16 items-center px-4 container mx-auto"
+            style={{ maxWidth: "97.5%" }}
           >
             <Image
               src="/images/cloud.svg"
               width="50"
               height="50"
-              alt="Next.js Logo"
+              alt="Cloud Frame Logo"
               className="mr-4"
             />
             Cloud Frame

@@ -98,7 +98,9 @@ export default function RootLayout({
               alt="Cloud Frame Logo"
               className="mr-4"
             />
-            Cloud Frame
+
+            <Link href="/">Cloud Frame</Link>
+
             <div className="ml-auto flex items-center space-x-4">
               <Avatar>
                 <AvatarImage src="/images/avatar.jpg" />
